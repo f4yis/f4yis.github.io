@@ -94,6 +94,10 @@ show-author: false
 # do you want some animations?
 animation: true
 
+#seo
+
+title: Mohamed Fayis
+
 plugins:
   - jekyll-seo-tag
   - jekyll-gist
