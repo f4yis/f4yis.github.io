@@ -7,13 +7,8 @@
     "size":"https://git.io/JeY69"
   }],
   "blocked":[
-      {"id":0, "app":"com.android.game"},
-        {"id":1, "app":"com.utorrent.client"},
+  
         {"id":2, "app":"com.torrent.client"},
-        {"id":3, "app":"com.tor.client"},
-        {"id":4, "app":"com.insta.client"},
-        {"id":5, "app":"com.facebook.client"},
-        {"id":6, "app":"com.get.client"}
   ],
   "free":[
     {"id":0, "file":0, "city":"Essen","country":"Germany","image":"germany","ip":"13.232.103.210","active":"true","signal":"a"},
