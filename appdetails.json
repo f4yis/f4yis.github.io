@@ -7,8 +7,7 @@
     "size":"https://git.io/JeY69"
   }],
   "blocked":[
-  
-        {"id":2, "app":"com.torrent.client"}
+      {"id":0, "app":"com.torrent.client"}
   ],
   "free":[
     {"id":0, "file":0, "city":"Essen","country":"Germany","image":"germany","ip":"13.232.103.210","active":"true","signal":"a"},
