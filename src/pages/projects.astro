@@ -3,8 +3,142 @@ import Container from "@components/container.astro";
 import Layout from "@layouts/Layout.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
-import heroImage from "@assets/projects/project-1.png";
 import ProjectCard from "@components/project-card.astro";
+const projects = [
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Algo Trader",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Ela cart",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Seachngo",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "FileShip",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Jobs Invent",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "IFSC Directory",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Stock Market Copy Trader",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Mindogon",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Amtech",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Collin Clouser",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Muzambi",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Radio Malayalam 98.6",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Lulu Holydays",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Hulmtech",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Homer",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Essaysmaster (AMP)",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Cazok",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Child App",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Soulfactors",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "All Movers",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Credot",
+        description:"gfh",
+        link:"#"
+    },
+    {
+        image: import('@assets/projects/project-1.png'),
+        title: "Club Sulimani",
+        description:"gfh",
+        link:"#"
+    },
+]
+
 ---
 
 <Layout title="">
@@ -16,12 +150,11 @@ import ProjectCard from "@components/project-card.astro";
               </Sectionhead>
             <!-- <h1 class="text-4xl font-bold">Project</h1> -->
             <div class="mx-auto max-w-4xl grid gap-6 grid-cols-1 md:grid-cols-2 gap-6 mt-20">
-                <ProjectCard image={heroImage} title="ggg" description="gfh" link="#"/>
-                <ProjectCard image={heroImage} title="ggg" description="gfh" link="#"/>
-                <ProjectCard image={heroImage} title="ggg" description="gfh" link="#"/>
-                <ProjectCard image={heroImage} title="ggg" description="gfh" link="#"/>
-                <ProjectCard image={heroImage} title="ggg" description="gfh" link="#"/>
-                <ProjectCard image={heroImage} title="ggg" description="gfh" link="#"/>
+                {
+                    projects.map(item => (
+                        <ProjectCard {...item}/>
+                    ))
+                }
             </div>
         </div>
     </Container>
