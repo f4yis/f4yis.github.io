@@ -1,0 +1,31 @@
+---
+import { Image } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+
+const { image, title, description, link } = Astro.props;
+---
+<div class="w-full relative">
+    <Image
+        class={"w-full"}
+        aspectRatio={"1200:630"}
+        alt="ads"
+        src={image}
+    />
+    <div class="py-2">
+        <h2 class="mt-b text-xl font-bold">{title}</h2>
+        <div class="flex justify-between">
+            <div class="text-gray-500 text-sm">{description}</div>
+            <div class="flex gap-1">
+                {
+                    link && 
+                    <a href={link}>
+                        <Icon
+                            class="h-4 text-black"
+                            name="mdi:link-variant"
+                        />
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
