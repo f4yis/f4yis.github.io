@@ -1,6 +1,7 @@
 ---
 import Container from "@components/container.astro";
 import Layout from "@layouts/Layout.astro";
+import Sectionhead from "@components/sectionhead.astro";
 
 import heroImage from "@assets/projects/project-1.png";
 import ProjectCard from "@components/project-card.astro";
@@ -9,8 +10,12 @@ import ProjectCard from "@components/project-card.astro";
 <Layout title="">
     <Container>
         <div class="mt-16">
-            <h1 class="text-4xl font-bold">Project</h1>
-            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <Sectionhead>
+                <Fragment slot="title">Projects</Fragment>
+                <Fragment slot="desc">Some of the works i have done.</Fragment>
+              </Sectionhead>
+            <!-- <h1 class="text-4xl font-bold">Project</h1> -->
+            <div class="mx-auto max-w-4xl grid gap-6 grid-cols-1 md:grid-cols-2 gap-6 mt-20">
                 <ProjectCard image={heroImage} title="ggg" description="gfh" link="#"/>
                 <ProjectCard image={heroImage} title="ggg" description="gfh" link="#"/>
                 <ProjectCard image={heroImage} title="ggg" description="gfh" link="#"/>
