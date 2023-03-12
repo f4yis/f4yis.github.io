@@ -2,14 +2,16 @@
 import { Image } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
 
-const { image, title, description, link } = Astro.props;
+const { image, title, description, link, linkType, index } = Astro.props;
 ---
 <div class="w-full relative">
     <Image
         class={"w-full"}
         aspectRatio={"1200:630"}
-        alt="ads"
+        alt={title}
         src={image}
+        loading={index <= 3 ? "eager" : "lazy"}
+        decoding={index <= 3 ? "sync" : "async"}
     />
     <div class="py-2">
         <h2 class="mt-b text-xl font-bold">{title}</h2>
@@ -17,13 +19,22 @@ const { image, title, description, link } = Astro.props;
             <div class="text-gray-500 text-sm">{description}</div>
             <div class="flex gap-1">
                 {
-                    link && 
-                    <a href={link}>
-                        <Icon
-                            class="h-4 text-black"
-                            name="mdi:link-variant"
-                        />
-                    </a>
+                    link && (
+                        linkType == 'js-open' ? (
+                            <Icon
+                                onclick={`window.open('${link}')`}
+                                class="h-4 text-black cursor-pointer"
+                                name="mdi:link-variant"
+                            />
+                        ) : (
+                        <a href={link} target="_blank">
+                            <Icon
+                                class="h-4 text-black"
+                                name="mdi:link-variant"
+                            />
+                        </a>
+                        )
+                    )
                 }
             </div>
         </div>
