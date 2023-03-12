@@ -37,9 +37,10 @@ export async function getStaticPaths() {
 	});
 }
 const { post } = Astro.props;
+console.log(post)
 ---
 
-<Layout title={post.title}>
+<Layout title={post.meta_title || post.title} description={post.meta_description}>
 	<Container>
 		<div class="mx-auto max-w-[735px] mt-14">
 			<span

@@ -42,7 +42,7 @@ const posts = await ghostClient.posts
                     position="center"
                     loading={index <= 2 ? "eager" : "lazy"}
                     decoding={index <= 2 ? "sync" : "async"}
-                    class="w-full rounded-md"
+                    class="w-full"
                   />
                   <div>
                     {blogPostEntry?.tags?.map((item: any) => (
