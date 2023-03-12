@@ -27,7 +27,7 @@ const { image, title, description, link, linkType, index } = Astro.props;
                                 name="mdi:link-variant"
                             />
                         ) : (
-                        <a href={link} target="_blank">
+                        <a href={link} target="_blank" title={"Preview link of " + title}>
                             <Icon
                                 class="h-4 text-black"
                                 name="mdi:link-variant"
