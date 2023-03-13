@@ -36,20 +36,10 @@ const makeTitle = title
       description={description}
       canonical={canonicalURL}
       twitter={{
-        creator: "@f4yis",
-        site: "@web3templates",
-        card: "summary_large_image",
+        creator: "@f4yis"
       }}
-      openGraph={{
-        basic: {
-          url: canonicalURL,
-          type: "website",
-          title: `Astroship - Starter Template for Astro`,
-          image: resolvedImageWithDomain,
-        },
-        image: {
-          alt: "Astroship Homepage Screenshot",
-        },
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.svg" }]
       }}
     />
   </head>
