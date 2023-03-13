@@ -27,7 +27,7 @@ const posts = await ghostClient.posts
     <main class="mt-16">
       <ul class="grid gap-16 max-w-4xl mx-auto">
         {
-          posts.map((blogPostEntry: any, index: any) => (
+          posts?.map((blogPostEntry: any, index: any) => (
             <li>
               <a href={`/blog/${blogPostEntry.slug}`}>
                 <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
@@ -35,7 +35,7 @@ const posts = await ghostClient.posts
                     src={blogPostEntry.feature_image}
                     alt={blogPostEntry.feature_image_alt}
                     sizes="(max-width: 800px) 100vw, 800px"
-                    widths={[200, 400, 800]}
+                    widths={[300, 500, 600]}
                     aspectRatio="1200:630"
                     background="#ffffff"
                     fit="cover"
@@ -43,6 +43,7 @@ const posts = await ghostClient.posts
                     loading={index <= 2 ? "eager" : "lazy"}
                     decoding={index <= 2 ? "sync" : "async"}
                     class="w-full"
+                    width={500} height={263}
                   />
                   <div>
                     {blogPostEntry?.tags?.map((item: any) => (
