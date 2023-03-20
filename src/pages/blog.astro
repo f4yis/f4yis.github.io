@@ -29,7 +29,7 @@ const posts = await ghostClient.posts
         {
           posts?.map((blogPostEntry: any, index: any) => (
             <li>
-              <a href={`/blog/${blogPostEntry.slug}`}>
+              <a href={`/blog/${blogPostEntry.slug}/`}>
                 <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
                   <Picture
                     src={blogPostEntry.feature_image}

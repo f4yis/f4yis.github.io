@@ -27,30 +27,37 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
                 About
               </a>
             </li>
+            <Dropdown
+                title={"Products"}
+                children={[
+                  { title: "Partytown Analytics", path: "/partytown-analytics/" }
+                ]}
+                lastItem={false}
+              />
             <li>
               <a
-                href={'/projects'}
+                href={'/projects/'}
                 class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
                 Projects
               </a>
             </li>
             <li>
               <a
-                href={'/blog'}
+                href={'/blog/'}
                 class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
                 Blog
               </a>
             </li>
             <li>
               <a
-                href={'/contact'}
+                href={'/contact/'}
                 class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
                 Contact
               </a>
             </li>
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" size="md" block>Resume</Link>
+          <Link href="/mohamed-fayis-resume.pdf" size="md" block>Resume</Link>
         </div>
       </MenuItems>
     </Astronav>
