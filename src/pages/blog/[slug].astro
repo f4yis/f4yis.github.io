@@ -41,6 +41,24 @@ console.log(post)
 ---
 
 <Layout title={post.meta_title || post.title} description={post.meta_description}>
+	<style>
+		.content-area :global(code) {
+			word-wrap: break-word;
+			white-space: break-spaces;
+			background: #eee;
+			padding: 10px;
+			margin: 15px 0;
+			display: block;
+		}
+		.content-area :global(p){
+			margin-bottom: 20px;
+			font-size: 18px;
+			line-height: 160%;
+		}
+		.content-area :global(img){
+			margin-bottom: 25px;
+		}
+	</style>
 	<Container>
 		<div class="mx-auto max-w-[735px] mt-14">
 			<span
@@ -68,7 +86,7 @@ console.log(post)
 					}
 				</div>
 			</div>
-			<div class="mx-auto prose prose-lg mt-6">
+			<div class="mx-auto prose prose-lg mt-6 content-area">
 				<!-- <Content /> -->
 				<Fragment set:html={post.html} />
 			</div>
