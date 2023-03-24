@@ -40,7 +40,7 @@ const { post } = Astro.props;
 console.log(post)
 ---
 
-<Layout title={post.meta_title || post.title} description={post.meta_description}>
+<Layout noName title={post.meta_title || post.title} description={post.meta_description}>
 	<style>
 		.content-area :global(code) {
 			word-wrap: break-word;
